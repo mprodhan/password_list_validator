@@ -17,9 +17,3 @@ def valid(*args):
 
 valid(password)
 print(f'password_list: {password_list}')
-
-# def list_creator(*args):
-#     valid(password)
-#     password_list.append(*args.strip())
-
-# list_creator(*args)
