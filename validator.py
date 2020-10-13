@@ -1,5 +1,4 @@
 import re
-import pdb
 
 password = r"^\D[A-Za-z]\S+[0-9]*$"
 password_list = []
@@ -10,9 +9,21 @@ def valid(*args):
             for line in f:
                 valid_passwords = re.search(password, line)
                 if len(line) > 7:
-                    print(valid_passwords.group())
+                    password_list.append(line.strip())
+                    print(valid_passwords.group()
     except TypeError:
         print("Missing an argument in your valid_passwords variable.")
     return line
 
 valid(password)
+print(password_list)
+
+# def list_creator():
+#     valid(password)
+#     li = []
+#     for line in valid(password):
+#         stripped = line.strip()
+#         password_li = line.split()
+#         li.append(password_list)
+
+# list_creator()
