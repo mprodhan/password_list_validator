@@ -10,20 +10,16 @@ def valid(*args):
                 valid_passwords = re.search(password, line)
                 if len(line) > 7:
                     password_list.append(line.strip())
-                    print(valid_passwords.group()
+                    print(valid_passwords.group())
     except TypeError:
         print("Missing an argument in your valid_passwords variable.")
     return line
 
 valid(password)
-print(password_list)
+print(f'password_list: {password_list}')
 
-# def list_creator():
+# def list_creator(*args):
 #     valid(password)
-#     li = []
-#     for line in valid(password):
-#         stripped = line.strip()
-#         password_li = line.split()
-#         li.append(password_list)
+#     password_list.append(*args.strip())
 
-# list_creator()
+# list_creator(*args)
